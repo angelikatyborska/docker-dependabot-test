@@ -1,0 +1,8 @@
+# There should be newer Erlang and Debian slim
+FROM hexpm/elixir:1.20.4-erlang-27.0.1-debian-bookworm-20260918-slim as builder
+
+RUN echo bla
+
+FROM hexpm/elixir:1.20.4-erlang-27.0.1-debian-bookworm-20260918-slim as runner
+
+ENTRYPOINT ["/bla.sh"]

@@ -1,0 +1,8 @@
+# There should be newer Erlang
+FROM hexpm/elixir:1.20.4-erlang-27.0.1-alpine-3.24.3 as builder
+
+RUN echo bla
+
+FROM hexpm/elixir:1.20.4-erlang-27.0.1-alpine-3.24.3 as runner
+
+ENTRYPOINT ["/bla.sh"]
